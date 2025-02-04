@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in detail</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <h2>Here post in detail</h2>
+    <p>Post id:<%= postt.id %></p>
+    <div class="div1">
+        <h2 class="user">@<%=postt.username%></h2>               
+        <h4 class="desc">- <%=postt.desc%></h4>
+        <div class="circle">
+            <img src="<%= postt.prof_img %>" alt="profimg" class="prof_img">
+        </div>  
+        
+        <div class="div2">
+            <img src="<%= postt.img %>" alt="">
+        </div>
+
+    </div>
+    <a href="http://localhost:8081/threads">Back</a>
+    
+</body>
+</html>

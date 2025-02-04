@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add post</title>
+</head>
+<body>
+    <h1>Add new post</h1> <hr>
+    <form action="http://localhost:8081/threads" method="POST"> 
+        <p>Username:</p>
+        <input type="text" name="username" placeholder="Enter Username" required><br>
+        <p>Description:</p>
+        <input type="text" name="desc" placeholder="Enter Description" required><br>
+        <P>Image link:</P>
+        <input type="text" name="img" placeholder="Enter image URL" required alt="Image"> <br>
+        <P>Prof-Image link:</P>
+        <input type="text" name="prof_img" placeholder="Enter image URL" >
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>threads</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Threads</h1> 
+   
+    <form action="http://localhost:8081/threads/new" method="get">
+        <button type="submit">Add post</button>
+    </form>
+     <br>
+     <br>
+
+<% for(post of posts){ %>
+    <div class="div1">
+        <h2 class="user">@<%=post.username%></h2>               
+        <h4 class="desc">- <%=post.desc%></h4>
+        <div class="circle">
+            <img src="<%= post.prof_img %>" alt="profimg" class="prof_img">
+        </div>  
+        
+        <div class="div2">
+            <img src="<%= post.img %>" alt="">
+        </div>
+
+    </div>
+    
+    <a href="http://localhost:8081/threads/<%= post.id %>">In Detail</a> 
+    <a href="http://localhost:8081/threads/<%= post.id %>/edit">Edit post</a>
+   <p></p>
+    <form action="http://localhost:8081/threads/<%= post.id %>?_method=DELETE" method="post">
+        <button type="submit">Delete post</button>
+    </form>
+    
+    <hr>
+    <% } %>
+
+    
+</body>
+</html>
